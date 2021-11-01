@@ -1,0 +1,21 @@
+
+.navicons{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 10px;
+    padding: 12px;
+    background: var(--tint-hightlight-color);
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    svg{
+        color: #fff;
+    }
+    &:hover{
+        background-color: rgba(160, 160, 160, 0.185);
+    }
+    
+}.dark-and-light-toggle{
+    margin: 20px 0;
+}

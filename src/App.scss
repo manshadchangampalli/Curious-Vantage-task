@@ -1,0 +1,15 @@
+@import './Styles/_variables.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--tint-background-color);
+    color: var(--tint-text-color);
+    font-size: 16px;
+    scroll-behavior: smooth;
+    text-rendering: optimizespeed;
+    font-style: normal;
+}
