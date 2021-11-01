@@ -7,42 +7,37 @@ import { BiLogOut } from "react-icons/bi"
 
 
 function Navbtn({navTxt,navClass}) {
-    const [navClicked, setNavClicked] = useState()
+
     let navIcon;
     let iconStyles = { fontSize: "1.3rem",color:"#000" };
-    let clickedIconStyles = {color:"rgb(242, 98, 124)",fontSize: "1.3rem" }
     switch(navTxt){
         case 'My Page':
-            navIcon= <CgProfile style={navClicked=='My Page'?clickedIconStyles:iconStyles}/>
+            navIcon= <CgProfile style={{fontSize: "1.3rem",color:"rgb(242, 98, 124)" }}/>
             break;
         case 'Monetize':
-            navIcon= <CgCrown style={navClicked=='Monetize'?clickedIconStyles:iconStyles}/>
+            navIcon= <CgCrown style={iconStyles}/>
             break;
         case 'Analytics':
-            navIcon= <MdOutlineAnalytics style={navClicked=='Analytics'?clickedIconStyles:iconStyles}/>
+            navIcon= <MdOutlineAnalytics style={iconStyles}/>
                 break;
         case 'Earnings':
-            navIcon= <MdOutlineMonetizationOn style={navClicked=='Earnings'?clickedIconStyles:iconStyles}/>
+            navIcon= <MdOutlineMonetizationOn style={iconStyles}/>
             break;
         case 'Referrals':
-            navIcon= <BsEmojiSmile style={navClicked=='Referrals'?clickedIconStyles:iconStyles}/>
+            navIcon= <BsEmojiSmile style={iconStyles}/>
             break;
         case 'Settings':
-            navIcon= <AiOutlineSetting style={navClicked=='Settings'?clickedIconStyles:iconStyles}/>
+            navIcon= <AiOutlineSetting style={iconStyles}/>
             break;
         case 'Logout':
-            navIcon= <BiLogOut style={navClicked=='Logout'?clickedIconStyles:iconStyles}/>
+            navIcon= <BiLogOut style={iconStyles}/>
             break;
         default:
     }
 
-const navButtonClicked =(navText)=>{
-    console.log(navText);
-    setNavClicked(navText)
-}
 
     return (
-        <div onClick={()=>navButtonClicked(navTxt)} className={navClass+"-icon navicons"}>
+        <div  className={navClass+"-icon navicons"}>
             <div className="navicon">
             {navIcon}
             </div>
